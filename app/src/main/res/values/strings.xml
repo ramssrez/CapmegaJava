@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CapmegaJava</string>
+    <string name="primer_valor">Ingrese el primer valor</string>
+    <string name="segundo_valor">Ingrese el segundo valor</string>
+    <string name="bienvenidos">Bienvenidos a la siguiente aplicación de ejercicios</string>
+
+
+
+
+
 </resources>
