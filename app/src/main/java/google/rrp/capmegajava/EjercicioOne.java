@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EjercicioOne extends AppCompatActivity {
     private EditText edtFirstNumber;
@@ -42,9 +43,16 @@ public class EjercicioOne extends AppCompatActivity {
         edtSecondNumber =  findViewById(R.id.adt_second_number);
         int n1 = Integer.parseInt(edtFirstNumber.getText().toString());
         int n2 = Integer.parseInt(edtSecondNumber.getText().toString());
-        int res = n1 + n2;
-        txtvResultado = findViewById(R.id.txtv_resultado);
-        txtvResultado.setText("La suma de los numeros es: " + res);
+        if ((n1 > 0)&&(n2 > 0)){
+            int res = n1 + n2;
+            txtvResultado = findViewById(R.id.txtv_resultado);
+            txtvResultado.setText("La suma de los numeros es: " + res);
+        }else{
+            Toast.makeText(getApplicationContext(),"Los numeros deben ser mayores a cero",Toast.LENGTH_SHORT).show();
+        }
+//        int res = n1 + n2;
+//        txtvResultado = findViewById(R.id.txtv_resultado);
+//        txtvResultado.setText("La suma de los numeros es: " + res);
     }
 }
 
