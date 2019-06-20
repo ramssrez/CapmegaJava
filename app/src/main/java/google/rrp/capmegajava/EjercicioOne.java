@@ -7,7 +7,6 @@ package google.rrp.capmegajava;
  * rramirez@capmega.com
  */
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,7 +19,6 @@ public class EjercicioOne extends AppCompatActivity {
     private EditText edtSecondNumber;
     private  Button btnCalcular;
     private TextView txtvResultado;
-    private TextView txtvResultado2;
 
 
     @Override
@@ -28,20 +26,9 @@ public class EjercicioOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_one);
         btnCalcular = findViewById(R.id.btn_calcular);
-        //edtFirstNumber = (EditText) findViewById(R.id.edt_first_number);
-        //edtSecondNumber = (EditText) findViewById(R.id.adt_second_number);
-        //txtvResultado = findViewById(R.id.txtv_resultado);
-        //txtvResultado2 = findViewById(R.id.txtv_resultado2);
-
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String numberOne = null;
-//                String numberTwo = null;
-//                numberOne = edtFirstNumber.getText().toString();
-//                numberTwo = edtSecondNumber.getText().toString();
-//                txtvResultado.setText(numberOne);
-//                txtvResultado2.setText(numberTwo);
                 sumaNumeros();
 
             }
