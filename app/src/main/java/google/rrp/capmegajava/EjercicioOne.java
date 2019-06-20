@@ -7,6 +7,7 @@ package google.rrp.capmegajava;
  * rramirez@capmega.com
  */
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -26,26 +27,37 @@ public class EjercicioOne extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_one);
-        btnCalcular = (Button) findViewById(R.id.btn_calcular);
-        edtFirstNumber = (EditText) findViewById(R.id.edt_first_number);
-        edtSecondNumber = (EditText) findViewById(R.id.adt_second_number);
-        txtvResultado = findViewById(R.id.txtv_resultado);
-        txtvResultado2 = findViewById(R.id.txtv_resultado2);
+        btnCalcular = findViewById(R.id.btn_calcular);
+        //edtFirstNumber = (EditText) findViewById(R.id.edt_first_number);
+        //edtSecondNumber = (EditText) findViewById(R.id.adt_second_number);
+        //txtvResultado = findViewById(R.id.txtv_resultado);
+        //txtvResultado2 = findViewById(R.id.txtv_resultado2);
 
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String numberOne = null;
-                String numbreTwo = null;
-                numberOne = edtFirstNumber.getText().toString();
-                numbreTwo = edtSecondNumber.getText().toString();
-                txtvResultado.setText(numberOne);
-                txtvResultado2.setText(numbreTwo);
+//                String numberOne = null;
+//                String numberTwo = null;
+//                numberOne = edtFirstNumber.getText().toString();
+//                numberTwo = edtSecondNumber.getText().toString();
+//                txtvResultado.setText(numberOne);
+//                txtvResultado2.setText(numberTwo);
+                sumaNumeros();
 
             }
         });
 
 
+    }
+
+    public void sumaNumeros(){
+        edtFirstNumber =  findViewById(R.id.edt_first_number);
+        edtSecondNumber =  findViewById(R.id.adt_second_number);
+        int n1 = Integer.parseInt(edtFirstNumber.getText().toString());
+        int n2 = Integer.parseInt(edtSecondNumber.getText().toString());
+        int res = n1 + n2;
+        txtvResultado = findViewById(R.id.txtv_resultado);
+        txtvResultado.setText("La suma de los numeros es: " + res);
     }
 }
 
