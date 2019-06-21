@@ -41,18 +41,16 @@ public class EjercicioOne extends AppCompatActivity {
     public void sumaNumeros(){
         edtFirstNumber =  findViewById(R.id.edt_first_number);
         edtSecondNumber =  findViewById(R.id.adt_second_number);
-        int n1 = Integer.parseInt(edtFirstNumber.getText().toString());
-        int n2 = Integer.parseInt(edtSecondNumber.getText().toString());
-        if ((n1 > 0)&&(n2 > 0)){
-            int res = n1 + n2;
-            txtvResultado = findViewById(R.id.txtv_resultado);
-            txtvResultado.setText("La suma de los numeros es: " + res);
+        if ((edtFirstNumber.getText().toString().isEmpty()) || (edtSecondNumber.getText().toString().isEmpty())) {
+            Toast.makeText(getApplicationContext(),"No debe dejar espacios en blanco",Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(getApplicationContext(),"Los numeros deben ser mayores a cero",Toast.LENGTH_SHORT).show();
+            int n1 = Integer.parseInt(edtFirstNumber.getText().toString());
+            int n2 = Integer.parseInt(edtSecondNumber.getText().toString());
+            int sum = n1 + n2;
+            txtvResultado = findViewById(R.id.txtv_resultado);
+            txtvResultado.setText("La suma de los numeros es: " + sum);
+            Toast.makeText(getApplicationContext(),"Estas en lo correcto",Toast.LENGTH_SHORT).show();
         }
-//        int res = n1 + n2;
-//        txtvResultado = findViewById(R.id.txtv_resultado);
-//        txtvResultado.setText("La suma de los numeros es: " + res);
     }
 }
 
