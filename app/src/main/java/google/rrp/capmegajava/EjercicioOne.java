@@ -48,8 +48,8 @@ public class EjercicioOne extends AppCompatActivity {
             int n2 = Integer.parseInt(edtSecondNumber.getText().toString());
             int sum = n1 + n2;
             txtvResultado = findViewById(R.id.txtv_resultado);
-            txtvResultado.setText("La suma de los numeros es: " + sum);
-            Toast.makeText(getApplicationContext(),"Estas en lo correcto",Toast.LENGTH_SHORT).show();
+            txtvResultado.setText("La suma de los números es: " + sum);
+            Toast.makeText(getApplicationContext(),"La suma de los número es: " +sum,Toast.LENGTH_SHORT).show();
         }
     }
 }
