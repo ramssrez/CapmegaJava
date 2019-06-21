@@ -16,19 +16,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class EjercicioOne extends AppCompatActivity implements View.OnClickListener {
-    private EditText edtFirstNumber;
-    private EditText edtSecondNumber;
-    private  Button btnCalcularEncisoA;
-    private  Button btnCalcularEncisoB;
-    private  Button btnCalcularEncisoC;
-    private TextView txtvResultado;
+    private  EditText edtFirstNumber;
+    private  EditText edtSecondNumber;
+    private  Button   btnCalcularEncisoB;
+    private  Button   btnCalcularEncisoC;
+    private  TextView txtvResultado;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_one);
-        //btnCalcularEncisoA = findViewById(R.id.btn_calcular_enciso_a);
         btnCalcularEncisoB = findViewById(R.id.btn_calcular_enciso_b);
         btnCalcularEncisoC = findViewById(R.id.btn_calcular_enciso_c);
         btnCalcularEncisoC.setOnClickListener(this);
@@ -37,21 +35,18 @@ public class EjercicioOne extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 sumaNumeros();
-
             }
         });
-
-
     }
 
     public void sumaNumeros(){
-        edtFirstNumber =  findViewById(R.id.edt_first_number);
+        edtFirstNumber  =  findViewById(R.id.edt_first_number);
         edtSecondNumber =  findViewById(R.id.adt_second_number);
         if ((edtFirstNumber.getText().toString().isEmpty()) || (edtSecondNumber.getText().toString().isEmpty())) {
             Toast.makeText(getApplicationContext(),"No debe dejar espacios en blanco",Toast.LENGTH_SHORT).show();
         }else{
-            int n1 = Integer.parseInt(edtFirstNumber.getText().toString());
-            int n2 = Integer.parseInt(edtSecondNumber.getText().toString());
+            int n1  = Integer.parseInt(edtFirstNumber.getText().toString());
+            int n2  = Integer.parseInt(edtSecondNumber.getText().toString());
             int sum = n1 + n2;
             txtvResultado = findViewById(R.id.txtv_resultado);
             txtvResultado.setText("La suma de los números es: " + sum);
@@ -67,8 +62,6 @@ public class EjercicioOne extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         sumaNumeros();
-
-
     }
 }
 
