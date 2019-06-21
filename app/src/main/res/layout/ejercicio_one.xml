@@ -51,28 +51,55 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:textSize="25dp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_calcular"
-        tools:layout_editor_absoluteX="-32dp" />
-   <!-- <TextView
-        android:id="@+id/txtv_resultado2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtv_resultado"
-        tools:layout_editor_absoluteX="29dp" />-->
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular_enciso_c"
+        tools:layout_editor_absoluteX="-55dp" />
 
     <Button
-        android:id="@+id/btn_calcular"
+        android:id="@+id/btn_calcular_enciso_a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@color/colorAccent"
-        android:text="@string/apply"
         android:gravity="center"
+        android:onClick="suma"
+        android:text="@string/enciso_a"
         android:textColor="@color/colorWhite"
-        app:layout_constraintTop_toBottomOf="@+id/adt_second_number"
-        tools:layout_editor_absoluteX="38dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adt_second_number" />
+
+    <Button
+        android:id="@+id/btn_calcular_enciso_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/enciso_b"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular_enciso_a" />
+
+    <Button
+        android:id="@+id/btn_calcular_enciso_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/enciso_c"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calcular_enciso_b" />
+
 
 </android.support.constraint.ConstraintLayout>

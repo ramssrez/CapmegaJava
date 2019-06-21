@@ -15,10 +15,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class EjercicioOne extends AppCompatActivity {
+public class EjercicioOne extends AppCompatActivity implements View.OnClickListener {
     private EditText edtFirstNumber;
     private EditText edtSecondNumber;
-    private  Button btnCalcular;
+    private  Button btnCalcularEncisoA;
+    private  Button btnCalcularEncisoB;
+    private  Button btnCalcularEncisoC;
     private TextView txtvResultado;
 
 
@@ -26,8 +28,12 @@ public class EjercicioOne extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_one);
-        btnCalcular = findViewById(R.id.btn_calcular);
-        btnCalcular.setOnClickListener(new View.OnClickListener() {
+        //btnCalcularEncisoA = findViewById(R.id.btn_calcular_enciso_a);
+        btnCalcularEncisoB = findViewById(R.id.btn_calcular_enciso_b);
+        btnCalcularEncisoC = findViewById(R.id.btn_calcular_enciso_c);
+        btnCalcularEncisoC.setOnClickListener(this);
+
+        btnCalcularEncisoB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sumaNumeros();
@@ -51,6 +57,18 @@ public class EjercicioOne extends AppCompatActivity {
             txtvResultado.setText("La suma de los números es: " + sum);
             Toast.makeText(getApplicationContext(),"La suma de los número es: " +sum,Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void suma (View view){
+        sumaNumeros();
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        sumaNumeros();
+
+
     }
 }
 

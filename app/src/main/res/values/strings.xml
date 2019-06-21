@@ -3,8 +3,13 @@
     <string name="primer_valor">Ingrese el primer valor</string>
     <string name="segundo_valor">Ingrese el segundo valor</string>
     <string name="bienvenidos">Bienvenidos a la siguiente aplicación de ejercicios</string>
-    <string name="apply">Calcular</string>
     <string name="go_to_ejercicio1">Ejercicio 1</string>
+    <string name="enciso_a">a) Calcular</string>
+    <string name="enciso_b">b) Calcular</string>
+    <string name="enciso_c">c) Calcular</string>
+
+
+
 
 
 
