@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">CapmegaJava</string>
     <string name="go_to_ejercicio2">Ejercicio 2</string>
+    <string name="bienvenidos">Bienvenidos a la siguiente aplicación de ejercicios: Ejercicio numero 2.</string>
+    <string name="primer_valor">Ingrese el primer valor</string>
+    <string name="segundo_valor">Ingrese el segundo valor</string>
+    <string name="resultado">El resultado es: </string>
+    <string name="descripcion">Selecciona la accion que deseas realizar </string>
+    <string name="calcular">Calcular</string>
+
+
 
 </resources>
