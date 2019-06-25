@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CapmegaJava</string>
+    <string name="go_to_ejercicio2">Ejercicio 2</string>
+
 </resources>
