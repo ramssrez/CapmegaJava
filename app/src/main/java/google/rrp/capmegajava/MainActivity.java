@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void goToEjercicioTwo(View view){
+    public void go_to_ejercicio_two(View view){
         Intent intent = new Intent(MainActivity.this, EjercicioTwo.class);
         startActivity(intent);
         finish();
