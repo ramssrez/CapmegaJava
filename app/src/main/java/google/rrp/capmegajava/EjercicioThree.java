@@ -71,11 +71,11 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
         }else{
             int n1  = Integer.parseInt(edt_first_number.getText().toString());
             int n2  = Integer.parseInt(edt_second_number.getText().toString());
-            if (check_box_resta.isChecked()){
+            if (check_box_suma.isChecked()){
                 int sum  = n1 + n2;
                 txtv_resultado.setText("La suma de los numeros es: " +sum);
                 Toast.makeText(getApplicationContext(),"La suma de los números es: " +sum,Toast.LENGTH_SHORT).show();
-            }else if (check_box_suma.isChecked()){
+            }else if (check_box_resta.isChecked()){
                 int res = n1 - n2 ;
                 txtv_resultado.setText("La resta de los numeros es: " +res);
                 Toast.makeText(getApplicationContext(),"La resta de los número es: " +res,Toast.LENGTH_SHORT).show();
