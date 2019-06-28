@@ -49,8 +49,12 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         if ((check_box_suma.isChecked())&&(check_box_resta.isChecked())){
             Toast.makeText(this,"Debes selecccionar solo una opcion", Toast.LENGTH_SHORT).show();
-        }else {
+        }else if((!check_box_suma.isChecked()) && (!check_box_resta.isChecked()) ) {
+            Toast.makeText(this,"Debes selecccionar una opcion", Toast.LENGTH_SHORT).show();
+
+        }else{
             accion_suma_resta();
+
         }
 
     }
