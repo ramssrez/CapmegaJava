@@ -45,7 +45,9 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this,"Funciona el boton", Toast.LENGTH_SHORT).show();
+        if ((check_box_suma.isChecked())&&(check_box_resta.isChecked())){
+            Toast.makeText(this,"Debes selecccionar una opcion", Toast.LENGTH_SHORT).show();
+        }
 
     }
     public void mensaje(CheckBox checkBox){
