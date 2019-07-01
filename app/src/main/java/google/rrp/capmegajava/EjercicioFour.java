@@ -61,6 +61,21 @@ public class EjercicioFour extends AppCompatActivity implements View.OnClickList
                 int res = n1 - n2;
                 txtv_resultado.setText("La resta de los numeros es: " + res);
                 Toast.makeText(getApplicationContext(), "La resta de los números es: " + res, Toast.LENGTH_SHORT).show();
+            }else if (selec.equals("Multiplicación")){
+                int mul = n1 * n2;
+                txtv_resultado.setText("La multiplicación de los números es: "+ mul);
+                Toast.makeText(getApplicationContext(), "La multiplicación de los números es: " + mul, Toast.LENGTH_SHORT).show();
+            }else if (selec.equals("División")){
+                double n3 = Integer.parseInt(edt_first_number.getText().toString());
+                double n4 = Integer.parseInt(edt_second_number.getText().toString());
+                if (n4 == 0){
+                    txtv_resultado.setText("DIVISIÓN ENTRE CERO, NO SE PUEDE REALIZAR LA OPERACIÓN");
+                    Toast.makeText(this, "DIVISIÓN ENTRE CERO, NO SE PUEDE REALIZAR LA OPERACIÓN", Toast.LENGTH_SHORT ).show();
+                }else {
+                    double div = n3 / n4;
+                    txtv_resultado.setText("La división de los números es: " + div);
+                    Toast.makeText(getApplicationContext(), "La división de los números es: " + div, Toast.LENGTH_SHORT).show();
+                }
             }
         }
 
