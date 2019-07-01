@@ -15,6 +15,7 @@
             android:layout_marginEnd="8dp"
             android:onClick="goToEjercicioOne"
             android:text="@string/go_to_ejercicio1"
+            android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,6 +29,7 @@
             android:layout_marginEnd="8dp"
             android:onClick="go_to_ejercicio_two"
             android:text="@string/go_to_ejercicio2"
+            android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_go_ejercicio_one" />
@@ -41,6 +43,7 @@
             android:layout_marginEnd="8dp"
             android:onClick="go_to_ejercicio_three"
             android:text="@string/go_to_ejercicio3"
+            android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_go_ejercicio_two" />
@@ -54,6 +57,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:onClick="go_to_ejercicio_four"
+            android:textAllCaps="false"
             android:text="@string/go_to_ejercicio4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
