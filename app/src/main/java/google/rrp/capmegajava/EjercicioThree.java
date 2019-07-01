@@ -17,8 +17,8 @@ import android.widget.Toast;
  */
 public class EjercicioThree extends AppCompatActivity implements View.OnClickListener {
     private EditText edt_first_number;
-    private EditText    edt_second_number;
-    private Button btn_calcular;
+    private EditText edt_second_number;
+    private Button   btn_calcular;
     private TextView txtv_resultado;
     private CheckBox check_box_suma;
     private CheckBox check_box_resta;
