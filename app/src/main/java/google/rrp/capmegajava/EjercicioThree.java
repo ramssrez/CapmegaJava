@@ -64,8 +64,6 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
     }
     public void accion_suma_resta(){
 
-
-
         if ((edt_first_number.getText().toString().isEmpty()) || (edt_second_number.getText().toString().isEmpty())) {
             Toast.makeText(getApplicationContext(), "No debe dejar espacios en blanco", Toast.LENGTH_SHORT).show();
         }else{
