@@ -6,19 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+        <TextView
+            android:id="@+id/txtv_presentation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/bienvenidos5"
+            android:textColor="@color/colorWhite"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/btn_go_ejercicio_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:background="@color/colorAccent"
             android:onClick="goToEjercicioOne"
             android:text="@string/go_to_ejercicio1"
             android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txtv_presentation" />
 
         <Button
             android:id="@+id/btn_go_ejercicio_two"
@@ -30,6 +46,8 @@
             android:onClick="go_to_ejercicio_two"
             android:text="@string/go_to_ejercicio2"
             android:textAllCaps="false"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_go_ejercicio_one" />
@@ -44,6 +62,8 @@
             android:onClick="go_to_ejercicio_three"
             android:text="@string/go_to_ejercicio3"
             android:textAllCaps="false"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_go_ejercicio_two" />
@@ -59,6 +79,8 @@
             android:onClick="go_to_ejercicio_four"
             android:textAllCaps="false"
             android:text="@string/go_to_ejercicio4"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorAccent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_go_ejercicio_three" />
