@@ -18,7 +18,7 @@ public class EjercicioSix extends AppCompatActivity implements View.OnClickListe
     private Button btn_string, btn_int, btn_double;
     final String[] strings_types = {"Spider", "Tiger", "Lion", "Bird", "Monster", "Cat", "Dog", "Duck", "Dragon", "Rat"};
     final int[] enteros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    final double[] doubles = {1.1, 2.3, 5.9, 45.2, 458.6, 12.9, 15.9, 9.6, 5.1, 2.1};
+    final double[] doubles = {1.25621, 2.26553, 5.2659, 45.56562, 458.56656, 12.56569, 15.4649, 9.9796, 5.214681, 2.1367481};
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +29,6 @@ public class EjercicioSix extends AppCompatActivity implements View.OnClickListe
         btn_string.setOnClickListener(this);
         btn_int.setOnClickListener(this);
         btn_double.setOnClickListener(this);
-
-
     }
 
 
