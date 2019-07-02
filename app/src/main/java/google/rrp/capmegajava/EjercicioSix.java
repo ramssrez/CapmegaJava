@@ -2,6 +2,7 @@ package google.rrp.capmegajava;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -27,19 +28,22 @@ public class EjercicioSix extends AppCompatActivity implements View.OnClickListe
 
 
     }
-    
+
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_string:
                 Toast.makeText(this, "Funcionamiento de los botones 1", Toast.LENGTH_SHORT).show();
+                Log.i("boton de los strings", String.valueOf(btn_string));
                 break;
             case R.id.btn_int:
                 Toast.makeText(this, "Funcionamiento de los botones 2", Toast.LENGTH_SHORT).show();
+                Log.i("Boton de los enteros", String.valueOf(btn_int));
                 break;
             case R.id.btn_double:
                 Toast.makeText(this, "Funcionamiento de los botones 3", Toast.LENGTH_SHORT).show();
+                Log.i("boton de los doubles", String.valueOf(btn_double));
                 break;
 
         }
