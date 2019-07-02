@@ -27,20 +27,20 @@ public class EjercicioSix extends AppCompatActivity implements View.OnClickListe
 
 
     }
-
-
-
+    
 
     @Override
     public void onClick(View v) {
-        if (btn_string.isClickable()){
-            Toast.makeText(this, "Funcionamiento de los botones 1", Toast.LENGTH_SHORT).show();
-
-        } else if(btn_double.isClickable()){
-            Toast.makeText(this, "Funcionamiento de los botones 2", Toast.LENGTH_SHORT).show();
-
-        }else if (btn_int.isClickable()){
-            Toast.makeText(this, "Funcionamiento de los botones 3", Toast.LENGTH_SHORT).show();
+        switch (v.getId()){
+            case R.id.btn_string:
+                Toast.makeText(this, "Funcionamiento de los botones 1", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_int:
+                Toast.makeText(this, "Funcionamiento de los botones 2", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_double:
+                Toast.makeText(this, "Funcionamiento de los botones 3", Toast.LENGTH_SHORT).show();
+                break;
 
         }
 
