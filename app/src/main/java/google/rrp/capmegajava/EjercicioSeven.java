@@ -18,9 +18,6 @@ import java.util.ArrayList;
 
 public class EjercicioSeven extends AppCompatActivity implements View.OnClickListener {
     private Button btn_string, btn_int, btn_double;
-    //final String[] strings_types = {"Spider", "Tiger", "Lion", "Bird", "Monster", "Cat", "Dog", "Duck", "Dragon", "Rat"};
-    //final int[] enteros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    final double[] doubles = {1.25621, 2.26553, 5.2659, 45.56562, 458.56656, 12.56569, 15.4649, 9.9796, 5.214681, 2.1367481};
     ArrayList<String> strings;
     ArrayList<Integer> ints;
     ArrayList<Double> doubloss;
@@ -49,8 +46,27 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
         strings.add("Dragon");
         strings.add("Ratatas");
 
+        ints.add(1);
+        ints.add(2);
+        ints.add(3);
+        ints.add(4);
+        ints.add(5);
+        ints.add(6);
+        ints.add(7);
+        ints.add(8);
+        ints.add(9);
+        ints.add(10);
 
-
+        doubloss.add(1.253);
+        doubloss.add(112.25543);
+        doubloss.add(1.253);
+        doubloss.add(89.26553);
+        doubloss.add(5416.21233);
+        doubloss.add(182.25253);
+        doubloss.add(15.489);
+        doubloss.add(169.51);
+        doubloss.add(12.648);
+        doubloss.add(2556.2454);
     }
 
 
@@ -67,14 +83,12 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_int:
                 Log.i("El array tiene la siguiente dimensión ", String.valueOf(ints.size()));
                 for (int i = 0; i < 10; i++) {
-                    ints.add(i);
                     Log.i("Array de los enteros en la posición: "+i, String.valueOf(ints.get(i)));
                 }
                 break;
             case R.id.btn_double:
                 Log.i("El array tiene la siguiente dimensión ", String.valueOf(doubloss.size()));
                 for (int i = 0; i < 10; i++) {
-                    doubloss.add(1.128+i);
                     Log.i("Array de los doubles en la posicón: "+i, String.valueOf(doubloss.get(i)));
                 }
                 break;
