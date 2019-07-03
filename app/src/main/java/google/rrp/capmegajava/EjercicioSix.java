@@ -15,7 +15,9 @@ import android.widget.Button;
  * rramirez@capmega.com
  */
 public class EjercicioSix extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_string, btn_int, btn_double;
+    private Button btn_string;
+    private Button btn_int;
+    private Button btn_double;
     final String[] strings_types = {"Spider", "Tiger", "Lion", "Bird", "Monster", "Cat", "Dog", "Duck", "Dragon", "Rat"};
     final int[] enteros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     final double[] doubles = {1.25621, 2.26553, 5.2659, 45.56562, 458.56656, 12.56569, 15.4649, 9.9796, 5.214681, 2.1367481};

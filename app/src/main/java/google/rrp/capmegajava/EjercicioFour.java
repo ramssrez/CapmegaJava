@@ -19,9 +19,9 @@ import android.widget.Toast;
 public class EjercicioFour extends AppCompatActivity implements View.OnClickListener {
     private EditText edt_first_number;
     private EditText edt_second_number;
-    private Button btn_calcular;
+    private Button   btn_calcular;
     private TextView txtv_resultado;
-    private Spinner spn_opciones;
+    private Spinner  spn_opciones;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

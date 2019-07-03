@@ -17,7 +17,9 @@ import java.util.ArrayList;
  */
 
 public class EjercicioSeven extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_string, btn_int, btn_double;
+    private Button btn_string;
+    private Button btn_int;
+    private Button btn_double;
     ArrayList<String> strings;
     ArrayList<Integer> ints;
     ArrayList<Double> doubloss;
