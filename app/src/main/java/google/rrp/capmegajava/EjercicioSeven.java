@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
@@ -19,9 +21,11 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
     private Button btn_string;
     private Button btn_int;
     private Button btn_double;
+    private Button btn_nombres;
     ArrayList<String> strings;
     ArrayList<Integer> ints;
     ArrayList<Double> doubloss;
+    ArrayList<String> nombres;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +33,15 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
         btn_string = findViewById(R.id.btn_string);
         btn_int = findViewById(R.id.btn_int);
         btn_double = findViewById(R.id.btn_double);
+        btn_nombres = findViewById(R.id.btn_names);
+        btn_nombres.setOnClickListener(this);
         btn_string.setOnClickListener(this);
         btn_int.setOnClickListener(this);
         btn_double.setOnClickListener(this);
         strings = new ArrayList<>();
         ints = new ArrayList<>();
         doubloss = new  ArrayList<>();
+        nombres = new ArrayList<>();
 
         strings.add("Spider");
         strings.add("Tiger");
@@ -68,6 +75,17 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
         doubloss.add(169.51);
         doubloss.add(12.648);
         doubloss.add(2556.2454);
+
+        nombres.add("Jose"); //1.-Creacion de los nombres
+        nombres.add("Miguel");
+        nombres.add("Issac");
+        nombres.add("Raúl");
+        nombres.add("Marco");
+        nombres.add("Fany");
+        nombres.add("Carlos");
+        nombres.add("Johnathan");
+        nombres.add("Marina");
+        nombres.add("Lidia");
     }
 
 
@@ -83,14 +101,36 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.btn_int:
                 Log.i("El array tiene la siguiente dimensión ", String.valueOf(ints.size()));
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < ints.size(); i++) {
                     Log.i("Array de los enteros en la posición: "+i, String.valueOf(ints.get(i)));
                 }
                 break;
             case R.id.btn_double:
                 Log.i("El array tiene la siguiente dimensión ", String.valueOf(doubloss.size()));
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < doubloss.size(); i++) {
                     Log.i("Array de los doubles en la posicón: "+i, String.valueOf(doubloss.get(i)));
+                }
+                break;
+            case R.id.btn_names:
+                Log.i("El array tiene la siguiente dimensión ", String.valueOf(nombres.size()));
+
+                for (int i = 0; i < nombres.size() ; i++) {
+                Log.i("Array de los nombre al inicio en la posicón: "+i, String.valueOf(nombres.get(i)));
+            }
+                nombres.add("Pikachu");   //2.-Se agrega un nombre
+                nombres.add(4,"Pichardo"); //3.- Se agrega un nombre en la posicion 4
+                nombres.get(8);  //4.- Obtener el numero 8
+                nombres.remove(0);  //5.- quitar la posicion 0
+                nombres.set(1,"Goku"); //6.- cambio del nombre en la posicion 1
+
+                Log.i("El array ahora tiene la siguiente dimensión ", String.valueOf(nombres.size())); //7 .- Tamño del array
+                Log.i("El nombre de la posicion 8 es ", String.valueOf(nombres.get(8)));
+                Log.i("Mi nombre se Raúl se encuentra en la posicion", String.valueOf(nombres.indexOf("Raúl")));
+                Log.i("Se encuentra Abel?", String.valueOf(nombres.contains("Abel")));
+                Collections.sort(nombres);  //Ordenamiento de los elemnetos alfabeticamente
+
+                for (int i = 0; i < nombres.size() ; i++) {
+                    Log.i("Array final de los nombres en la posicón: "+i, String.valueOf(nombres.get(i)));
                 }
                 break;
         }
