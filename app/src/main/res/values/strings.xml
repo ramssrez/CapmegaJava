@@ -11,7 +11,7 @@
     <string name="go_to_ejercicio3">Ejercicio 3\n Uso de CheckBox</string>
     <string name="go_to_ejercicio4">Ejercicio 4\n Uso de Spinner</string>
     <string name="go_to_ejercicio6">Ejercicio 6\n Uso de Array</string>
-    <string name="go_to_ejercicio7">Ejercicio 7\n Uso de ArrayList en Log</string>
+    <string name="go_to_ejercicio7">Ejercicio 7 y 8\n Uso de ArrayList en Log</string>
     <string name="descripcion">Selecciona la accion que deseas realizar </string>
     <string name="bienvenidos2">Bienvenidos a la siguiente aplicación de ejercicios: Ejercicio número 2.</string>
     <string name="bienvenidos3">Bienvenidos a la siguiente aplicación de ejercicios: Ejercicio número 3.</string>
@@ -19,9 +19,11 @@
     <string name="bienvenidos5">Ejercicio número 5.</string>
     <string name="bienvenidos6">Ejercicio número 6.</string>
     <string name="bienvenidos7">Ejercicio número 7.</string>
+    <string name="bienvenidos8">Ejercicio número 8.</string>
     <string name="resultado">El resultado es: </string>
     <string name="calcular">Calcular</string>
     <string name="strings">Boton de los Strings</string>
     <string name="enteros">Boton de los Ints</string>
     <string name="doubles">Boton de los Doubles</string>
+    <string name="names">Boton de los nombres</string>
 </resources>
