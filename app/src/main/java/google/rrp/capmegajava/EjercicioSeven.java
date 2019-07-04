@@ -122,18 +122,18 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
                 nombres.get(8);  //4.- Obtener el numero 8
                 nombres.remove(0);  //5.- quitar la posicion 0
                 nombres.set(1,"Goku"); //6.- cambio del nombre en la posicion 1
-                nombres.get(nombres.size()-1);
+                nombres.get(nombres.size()-1); //8.-Obtener el ultimo valor de la lista
                 Log.i("El array ahora tiene la siguiente dimensión ", String.valueOf(nombres.size())); //7 .- Tamño del array
                 Log.i("El nombre de la posicion 8 es ", String.valueOf(nombres.get(8)));
-                Log.i("Mi nombre se Raúl se encuentra en la posicion", String.valueOf(nombres.indexOf("Raúl")));
-                Log.i("Se encuentra Abel?", String.valueOf(nombres.contains("Abel")));
+                Log.i("Mi nombre se Raúl se encuentra en la posicion", String.valueOf(nombres.indexOf("Raúl"))); //9.- Obtener la posicion de la lista en base al nombre
+                Log.i("Se encuentra Abel?", String.valueOf(nombres.contains("Abel"))); //11.- Saber si se encuntra Abel en el arraylist
                 Log.i("El ultimo nombre es", nombres.get(nombres.size()-1));
                 Log.i("La lista antes del ordenamiento", "Semuestra de la siguiente manera");
                 for (int i = 0; i < nombres.size() ; i++) {
                     Log.i("Array final de los nombres en la posicón: "+i, String.valueOf(nombres.get(i)));
                 }
 
-                Collections.sort(nombres);  //Ordenamiento de los elemnetos alfabeticamente
+                Collections.sort(nombres);  //10.- Ordenamiento de los elemnetos alfabeticamente
                 Log.i("La lista ordenada queda: ", "Queda de la siguiente manera:");
                 for (int i = 0; i < nombres.size() ; i++) {
                     Log.i("Array final de los nombres en la posicón: "+i, String.valueOf(nombres.get(i)));
