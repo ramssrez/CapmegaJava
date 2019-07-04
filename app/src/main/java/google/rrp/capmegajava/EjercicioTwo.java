@@ -62,18 +62,29 @@ public class EjercicioTwo extends AppCompatActivity implements View.OnClickListe
             int n1  = Integer.parseInt(edt_first_number.getText().toString());
             int n2  = Integer.parseInt(edt_second_number.getText().toString());
             if (radioButton == radio_button_suma){
-                int sum  = n1 + n2;
-                txtv_resultado.setText("La suma de los numeros es: " +sum);
-                Toast.makeText(getApplicationContext(),"La suma de los números es: " +sum,Toast.LENGTH_SHORT).show();
+                //suma(n1,n2);
+                txtv_resultado.setText("La suma de los numeros es: " +suma(n1,n2));
+                Toast.makeText(getApplicationContext(),"La suma de los números es: " + suma(n1,n2),Toast.LENGTH_SHORT).show();
             }else if (radioButton == radio_button_resta){
-                int res = n1 - n2 ;
-                txtv_resultado.setText("La resta de los numeros es: " +res);
-                Toast.makeText(getApplicationContext(),"La resta de los número es: " +res,Toast.LENGTH_SHORT).show();
+                //resta(n1,n2);
+                txtv_resultado.setText("La resta de los numeros es: " + resta(n1,n2));
+                Toast.makeText(getApplicationContext(),"La resta de los número es: " +  resta(n1,n2) ,Toast.LENGTH_SHORT).show();
             }
 
         }
 
     }
+
+    public int suma (int numero1, int numero2){
+        int suma = numero1 + numero2;
+        return suma;
+    }
+
+    public int resta (int numero1, int numero2){
+        int resta = numero1 - numero2;
+        return resta;
+    }
+
 
 
 

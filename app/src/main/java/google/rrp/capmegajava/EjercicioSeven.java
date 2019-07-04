@@ -20,9 +20,9 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
     private Button btn_string;
     private Button btn_int;
     private Button btn_double;
-    ArrayList<String> strings;
-    ArrayList<Integer> ints;
-    ArrayList<Double> doubloss;
+    private ArrayList<String> strings;
+    private ArrayList<Integer> ints;
+    private ArrayList<Double> doubloss;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,6 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
         strings = new ArrayList<>();
         ints = new ArrayList<>();
         doubloss = new  ArrayList<>();
-
         strings.add("Spider");
         strings.add("Tiger");
         strings.add("Leon");

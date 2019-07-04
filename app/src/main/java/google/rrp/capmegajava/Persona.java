@@ -1,6 +1,8 @@
 package google.rrp.capmegajava;
 
-import android.content.Intent;
+
+import android.annotation.SuppressLint;
+import android.util.Log;
 
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
@@ -24,14 +26,18 @@ public class Persona {
     }
 
     public void  dormir(){
+        Log.i("Estoy durmiendo","Deja dormir");
 
     }
 
     public  void comer(){
+        Log.i("Tengo hambre", "Vamos por unas kekas");
 
     }
 
+    @SuppressLint("LongLogTag")
     public  void caminar(){
+        Log.i("Mendigos trasportistas, realizaron paro","ni modo nos toca caminar");
 
     }
 
