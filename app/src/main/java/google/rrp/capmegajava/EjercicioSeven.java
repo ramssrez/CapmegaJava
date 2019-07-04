@@ -112,32 +112,46 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
                 }
                 break;
             case R.id.btn_names:
-                Log.i("El array tiene la siguiente dimensión ", String.valueOf(nombres.size()));
-
+                Log.i("Enciso 1","Creacion de una lista de 10 elelmentos");
                 for (int i = 0; i < nombres.size() ; i++) {
-                Log.i("Array de los nombre al inicio en la posicón: "+i, String.valueOf(nombres.get(i)));
-            }
+                    Log.i("Array de los nombre al inicio en la posicón: "+i, String.valueOf(nombres.get(i)));
+                }
+                Log.i("Enciso 2","Se agrega un nombre");
                 nombres.add("Pikachu");   //2.-Se agrega un nombre
+                for (int i = 0; i < nombres.size() ; i++) {
+                    Log.i("Array de los nombre al inicio en la posicón: "+i, String.valueOf(nombres.get(i)));
+                }
+                Log.i("enciso 3","Se agrega en la posicion 4");
                 nombres.add(4,"Pichardo"); //3.- Se agrega un nombre en la posicion 4
-                nombres.get(8);  //4.- Obtener el numero 8
-                nombres.remove(0);  //5.- quitar la posicion 0
-                nombres.set(1,"Goku"); //6.- cambio del nombre en la posicion 1
-                nombres.get(nombres.size()-1); //8.-Obtener el ultimo valor de la lista
-                Log.i("El array ahora tiene la siguiente dimensión ", String.valueOf(nombres.size())); //7 .- Tamño del array
+                for (int i = 0; i < nombres.size() ; i++) {
+                    Log.i("Array de los nombre al inicio en la posicón: "+i, String.valueOf(nombres.get(i)));
+                }
+                Log.i("Enciso 4","mostrar nombre de la posicion 8");
                 Log.i("El nombre de la posicion 8 es ", String.valueOf(nombres.get(8)));
-                Log.i("Mi nombre se Raúl se encuentra en la posicion", String.valueOf(nombres.indexOf("Raúl"))); //9.- Obtener la posicion de la lista en base al nombre
-                Log.i("Se encuentra Abel?", String.valueOf(nombres.contains("Abel"))); //11.- Saber si se encuntra Abel en el arraylist
+                Log.i("enciso 5","Se remueve la posicion 0");
+                nombres.remove(0);  //5.- quitar la posicion 0
+                for (int i = 0; i < nombres.size() ; i++) {
+                    Log.i("Array de los nombre al inicio en la posicón: "+i, String.valueOf(nombres.get(i)));
+                }
+                Log.i("enciso 6","Se remplaza la posicion 1");
+                nombres.set(1,"Goku"); //6.- cambio del nombre en la posicion 1
+                for (int i = 0; i < nombres.size() ; i++) {
+                    Log.i("Array final de los nombres en la posicón: "+i, String.valueOf(nombres.get(i)));
+                }
+                Log.i("enciso 7","Dimension del array");
+                Log.i("El array tiene la siguiente dimensión ", String.valueOf(nombres.size()));
+                Log.i("enciso 8","obtener el ultimo nombre");
                 Log.i("El ultimo nombre es", nombres.get(nombres.size()-1));
-                Log.i("La lista antes del ordenamiento", "Semuestra de la siguiente manera");
-                for (int i = 0; i < nombres.size() ; i++) {
-                    Log.i("Array final de los nombres en la posicón: "+i, String.valueOf(nombres.get(i)));
-                }
-
+                Log.i("enciso 9","Obtener la posicion donde se encuentra mi nombre");
+                Log.i("Mi nombre se encuentra en la posicion", String.valueOf(nombres.indexOf("Raúl"))); //9.- Obtener la posicion de la lista en base al nombre
+                Log.i("enciso 10","ordenar alfabeticamente");
                 Collections.sort(nombres);  //10.- Ordenamiento de los elemnetos alfabeticamente
-                Log.i("La lista ordenada queda: ", "Queda de la siguiente manera:");
+                Log.i("La lista ordenada queda ", " de la siguiente manera:");
                 for (int i = 0; i < nombres.size() ; i++) {
                     Log.i("Array final de los nombres en la posicón: "+i, String.valueOf(nombres.get(i)));
                 }
+                Log.i("enciso 11","existe Abel en el arrayList?");
+                Log.i("Se encuentra Abel?", String.valueOf(nombres.contains("Abel"))); //11.- Saber si se encuntra Abel en el arraylist
                 break;
         }
     }
