@@ -1,5 +1,6 @@
 package google.rrp.capmegajava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,6 +23,7 @@ public class EjercicioFour extends AppCompatActivity implements View.OnClickList
     private EditText edt_first_number;
     private EditText edt_second_number;
     private Button   btn_calcular;
+    private Button   btn_regresar;
     private TextView txtv_resultado;
     private Spinner  spn_opciones;
 
@@ -33,18 +35,26 @@ public class EjercicioFour extends AppCompatActivity implements View.OnClickList
         edt_second_number = findViewById(R.id.edt_second_number);
         txtv_resultado = findViewById(R.id.txtv_resultado);
         btn_calcular = findViewById(R.id.btn_calcular);
+        btn_regresar = findViewById(R.id.btn_regresar);
         spn_opciones = findViewById(R.id.spn_options);
         String[] opciones = {"Suma", "Resta", "Multiplicación", "División"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones);
         spn_opciones.setAdapter(adapter);
         btn_calcular.setOnClickListener(this);
+        btn_regresar.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        operacione();
-        //Toast.makeText(this, "ok del boton", Toast.LENGTH_SHORT).show();
-
+        switch (v.getId()){
+            case R.id.btn_calcular:
+                operacione();
+                break;
+            case R.id.btn_regresar:
+                Intent intent = new Intent(EjercicioFour.this,MainActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 
     public void operacione() {
