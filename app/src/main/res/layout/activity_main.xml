@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:context=".MainActivity">
@@ -18,7 +18,7 @@
                     android:gravity="center"
                     android:text="@string/bienvenidos5"
                     android:textColor="@color/colorWhite"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -33,7 +33,6 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:background="@color/colorAccent"
-                    android:onClick="goToEjercicioOne"
                     android:text="@string/go_to_ejercicio1"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
@@ -49,7 +48,6 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:background="@color/colorAccent"
-                    android:onClick="go_to_ejercicio_two"
                     android:text="@string/go_to_ejercicio2"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"

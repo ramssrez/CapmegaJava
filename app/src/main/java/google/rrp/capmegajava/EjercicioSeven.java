@@ -7,8 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
@@ -30,6 +30,7 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_seven);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         btn_string = findViewById(R.id.btn_string);
         btn_int = findViewById(R.id.btn_int);
         btn_double = findViewById(R.id.btn_double);

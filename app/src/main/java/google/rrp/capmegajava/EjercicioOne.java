@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class EjercicioOne extends AppCompatActivity implements View.OnClickListener {
     private  EditText edtFirstNumber;
     private  EditText edtSecondNumber;
@@ -27,6 +29,7 @@ public class EjercicioOne extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_one);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         btnCalcularEncisoB = findViewById(R.id.btn_calcular_enciso_b);
         btnCalcularEncisoC = findViewById(R.id.btn_calcular_enciso_c);
         btnCalcularEncisoC.setOnClickListener(this);

@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
  * Jun 2019
@@ -26,6 +28,7 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_three);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         btn_calcular = findViewById(R.id.btn_calcular);
         edt_first_number   = findViewById(R.id.edt_first_number);
         edt_second_number  = findViewById(R.id.edt_second_number);

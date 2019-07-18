@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Objects;
+
 
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
@@ -25,6 +27,7 @@ public class EjercicioSix extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_six);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         btn_string = findViewById(R.id.btn_string);
         btn_int = findViewById(R.id.btn_int);
         btn_double = findViewById(R.id.btn_double);

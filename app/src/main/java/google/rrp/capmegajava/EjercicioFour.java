@@ -10,6 +10,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
  * Jun 2019
@@ -26,6 +28,7 @@ public class EjercicioFour extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_four);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         edt_first_number = findViewById(R.id.edt_first_number);
         edt_second_number = findViewById(R.id.edt_second_number);
         txtv_resultado = findViewById(R.id.txtv_resultado);

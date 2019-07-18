@@ -10,6 +10,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
  * Jun 2019
@@ -31,6 +33,7 @@ public class EjercicioTwo extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ejercicio_two);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         radioGroup = findViewById(R.id.rdgp_suma_resta);
         btn_calcular = findViewById(R.id.btn_calcular);
         btn_calcular.setOnClickListener(this);
