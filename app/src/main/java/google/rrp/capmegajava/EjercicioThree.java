@@ -1,5 +1,6 @@
 package google.rrp.capmegajava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -21,6 +22,7 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
     private EditText edt_first_number;
     private EditText edt_second_number;
     private Button   btn_calcular;
+    private Button   btn_regresar;
     private TextView txtv_resultado;
     private CheckBox check_box_suma;
     private CheckBox check_box_resta;
@@ -30,9 +32,11 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.ejercicio_three);
         Objects.requireNonNull(getSupportActionBar()).hide();
         btn_calcular = findViewById(R.id.btn_calcular);
+        btn_regresar = findViewById(R.id.btn_regresar);
         edt_first_number   = findViewById(R.id.edt_first_number);
         edt_second_number  = findViewById(R.id.edt_second_number);
         btn_calcular.setOnClickListener(this);
+        btn_regresar.setOnClickListener(this);
         txtv_resultado = findViewById(R.id.txtv_resultado);
         check_box_resta = findViewById(R.id.chb_resta);
         check_box_suma = findViewById(R.id.chb_suma);
@@ -50,15 +54,24 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        if ((check_box_suma.isChecked())&&(check_box_resta.isChecked())){
-            Toast.makeText(this,"Debes selecccionar solo una opcion", Toast.LENGTH_SHORT).show();
-        }else if((!check_box_suma.isChecked()) && (!check_box_resta.isChecked()) ) {
-            Toast.makeText(this,"Debes selecccionar una opcion", Toast.LENGTH_SHORT).show();
+        switch (v.getId()){
+            case R.id.btn_calcular:
+                if ((check_box_suma.isChecked())&&(check_box_resta.isChecked())){
+                    Toast.makeText(this,"Debes selecccionar solo una opcion", Toast.LENGTH_SHORT).show();
+                }else if((!check_box_suma.isChecked()) && (!check_box_resta.isChecked()) ) {
+                    Toast.makeText(this,"Debes selecccionar una opcion", Toast.LENGTH_SHORT).show();
 
-        }else{
-            accion_suma_resta();
+                }else{
+                    accion_suma_resta();
+                }
+                break;
 
+            case R.id.btn_regresar:
+                Intent intent = new Intent(EjercicioThree.this,MainActivity.class);
+                startActivity(intent);
+                break;
         }
+
 
     }
     public void mensaje(CheckBox checkBox){
@@ -75,11 +88,11 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
             if (check_box_suma.isChecked()){
                 int sum  = n1 + n2;
                 txtv_resultado.setText("La suma de los numeros es: " +sum);
-                Toast.makeText(getApplicationContext(),"La suma de los números es: " +sum,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"La suma de los números es: " +sum,Toast.LENGTH_SHORT).show();
             }else if (check_box_resta.isChecked()){
                 int res = n1 - n2 ;
                 txtv_resultado.setText("La resta de los numeros es: " +res);
-                Toast.makeText(getApplicationContext(),"La resta de los número es: " +res,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"La resta de los número es: " +res,Toast.LENGTH_SHORT).show();
             }
 
         }
