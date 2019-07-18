@@ -1,5 +1,6 @@
 package google.rrp.capmegajava;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,6 +25,7 @@ public class EjercicioTwo extends AppCompatActivity implements View.OnClickListe
     private EditText    edt_first_number;
     private EditText    edt_second_number;
     private Button      btn_calcular;
+    private Button      btn_regresar;
     private TextView    txtv_resultado;
     private RadioButton radio_button_suma;
     private RadioButton radio_button_resta;
@@ -35,8 +37,10 @@ public class EjercicioTwo extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.ejercicio_two);
         Objects.requireNonNull(getSupportActionBar()).hide();
         radioGroup = findViewById(R.id.rdgp_suma_resta);
+        btn_regresar = findViewById(R.id.btn_regresar);
         btn_calcular = findViewById(R.id.btn_calcular);
         btn_calcular.setOnClickListener(this);
+        btn_regresar.setOnClickListener(this);
 
     }
     public void check_Button(View view){
@@ -47,7 +51,15 @@ public class EjercicioTwo extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        accion_suma_resta();
+        switch (v.getId()){
+            case R.id.btn_calcular:
+                accion_suma_resta();
+                break;
+            case R.id.btn_regresar:
+                Intent intent = new Intent(EjercicioTwo.this,MainActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 
     public void accion_suma_resta(){

@@ -38,29 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
-//
-//    public void go_to_ejercicio_three(View view){
-//        Intent intent = new Intent(MainActivity.this, EjercicioThree.class);
-//        startActivity(intent);
-//        finish();
-//    }
-//    public void go_to_ejercicio_four(View view){
-//        Intent intent = new Intent(MainActivity.this, EjercicioFour.class);
-//        startActivity(intent);
-//        finish();
-//    }
-//
-//    public void go_to_ejercicio_six(View view){
-//        Intent intent = new Intent(MainActivity.this, EjercicioSix.class);
-//        startActivity(intent);
-//        finish();
-//    }
-//    public void go_to_ejercicio_seven(View view){
-//        Intent intent = new Intent(MainActivity.this, EjercicioSeven.class);
-//        startActivity(intent);
-//        finish();
-//    }
-
 
     @Override
     public void onClick(View v) {
