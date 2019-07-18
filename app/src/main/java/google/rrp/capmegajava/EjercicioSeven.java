@@ -1,6 +1,7 @@
 package google.rrp.capmegajava;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,6 +23,7 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
     private Button btn_int;
     private Button btn_double;
     private Button btn_nombres;
+    private Button btn_regresar;
     ArrayList<String> strings;
     ArrayList<Integer> ints;
     ArrayList<Double> doubloss;
@@ -35,10 +37,12 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
         btn_int = findViewById(R.id.btn_int);
         btn_double = findViewById(R.id.btn_double);
         btn_nombres = findViewById(R.id.btn_names);
+        btn_regresar = findViewById(R.id.btn_regresar);
         btn_nombres.setOnClickListener(this);
         btn_string.setOnClickListener(this);
         btn_int.setOnClickListener(this);
         btn_double.setOnClickListener(this);
+        btn_regresar.setOnClickListener(this);
         strings = new ArrayList<>();
         ints = new ArrayList<>();
         doubloss = new  ArrayList<>();
@@ -94,6 +98,10 @@ public class EjercicioSeven extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_regresar:
+                Intent intent = new Intent(EjercicioSeven.this,MainActivity.class);
+                startActivity(intent);
+                break;
             case R.id.btn_string:
                 Log.i("El array tiene la siguiente dimensión ", String.valueOf(strings.size()));
                 for (int i = 0; i < strings.size(); i++) {
