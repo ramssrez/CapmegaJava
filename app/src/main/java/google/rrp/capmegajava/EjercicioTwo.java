@@ -72,24 +72,22 @@ public class EjercicioTwo extends AppCompatActivity implements View.OnClickListe
         txtv_resultado = findViewById(R.id.txtv_resultado);
 
         if ((edt_first_number.getText().toString().isEmpty()) || (edt_second_number.getText().toString().isEmpty())) {
-            Toast.makeText(getApplicationContext(), "No debe dejar espacios en blanco", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No debe dejar espacios en blanco", Toast.LENGTH_SHORT).show();
         }else{
             int n1  = Integer.parseInt(edt_first_number.getText().toString());
             int n2  = Integer.parseInt(edt_second_number.getText().toString());
             if (radioButton == radio_button_suma){
                 int sum  = n1 + n2;
                 txtv_resultado.setText("La suma de los numeros es: " +sum);
-                Toast.makeText(getApplicationContext(),"La suma de los números es: " +sum,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"La suma de los números es: " +sum,Toast.LENGTH_SHORT).show();
             }else if (radioButton == radio_button_resta){
                 int res = n1 - n2 ;
                 txtv_resultado.setText("La resta de los numeros es: " +res);
-                Toast.makeText(getApplicationContext(),"La resta de los número es: " +res,Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"La resta de los número es: " +res,Toast.LENGTH_SHORT).show();
             }
 
         }
 
     }
-
-
 
 }
