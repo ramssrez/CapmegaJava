@@ -15,8 +15,8 @@ import javax.security.auth.login.LoginException;
 public class Persona {
     private String nombre;
     private String sexo;
-    private Integer edad;
-    private Integer peso;
+    private int edad;
+    private float peso;
     private float altura;
 
     public Persona(String nombre, String sexo) {
@@ -28,19 +28,20 @@ public class Persona {
     }
 
     public void  dormir(){
-        Log.i("Estoy durmiendo","Deja dormir");
+        Log.i("Metodo dormir","Deja dormir, aun son las 12 de la mañana");
 
     }
 
     public  void comer(){
-        Log.i("Tengo hambre", "Vamos por unas kekas");
+        Log.i("Metodo comer", "Vamos por unas kekas");
 
     }
 
     @SuppressLint("LongLogTag")
     public  void caminar(){
-        Log.i("Mendigos trasportistas, realizaron paro","ni modo nos toca caminar");
+        Log.i("Metodo caminar","Esta re-lejos Capmega");
     }
+
 
     public String getNombre() {
         return nombre;
@@ -66,11 +67,11 @@ public class Persona {
         this.edad = edad;
     }
 
-    public int getPeso() {
+    public float getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(float peso) {
         this.peso = peso;
     }
 
