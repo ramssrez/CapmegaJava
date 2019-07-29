@@ -49,7 +49,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
+    public void go_to_ejercicio_nine(View view){
+        Intent intent = new Intent(MainActivity.this, EjercicioSeven.class);
+        startActivity(intent);
+        finish();
+    }
 
 
 }

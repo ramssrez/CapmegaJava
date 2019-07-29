@@ -4,6 +4,8 @@ package google.rrp.capmegajava;
 import android.annotation.SuppressLint;
 import android.util.Log;
 
+import javax.security.auth.login.LoginException;
+
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
  * Jul 2019
@@ -38,7 +40,6 @@ public class Persona {
     @SuppressLint("LongLogTag")
     public  void caminar(){
         Log.i("Mendigos trasportistas, realizaron paro","ni modo nos toca caminar");
-
     }
 
     public String getNombre() {
