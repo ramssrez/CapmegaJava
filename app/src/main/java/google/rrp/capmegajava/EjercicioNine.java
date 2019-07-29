@@ -51,9 +51,6 @@ public class EjercicioNine extends AppCompatActivity implements View.OnClickList
 
     public void toma_de_adatos(){
 
-
-
-
         if (edt_name.getText().toString().isEmpty()||edt_age.getText().toString().isEmpty()||
                 edt_altura.getText().toString().isEmpty()||edt_peso.getText().toString().isEmpty()){
             Toast.makeText(this,"No debe dejar espacios en blanco", Toast.LENGTH_SHORT).show();
