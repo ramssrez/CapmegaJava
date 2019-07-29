@@ -27,4 +27,6 @@
     <string name="doubles">Boton de los Doubles</string>
     <string name="names">Boton de los nombres</string>
     <string name="regresar">Regresar al inicio</string>
+    <string name="resta">Resta</string>
+    <string name="suma">Suma</string>
 </resources>

@@ -22,10 +22,10 @@ import java.util.Objects;
 public class EjercicioFour extends AppCompatActivity implements View.OnClickListener {
     private EditText edt_first_number;
     private EditText edt_second_number;
-    private Button   btn_calcular;
-    private Button   btn_regresar;
+    private Button btn_calcular;
+    private Button btn_regresar;
     private TextView txtv_resultado;
-    private Spinner  spn_opciones;
+    private Spinner spn_opciones;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,24 +35,18 @@ public class EjercicioFour extends AppCompatActivity implements View.OnClickList
         edt_second_number = findViewById(R.id.edt_second_number);
         txtv_resultado = findViewById(R.id.txtv_resultado);
         btn_calcular = findViewById(R.id.btn_calcular);
-        btn_regresar = findViewById(R.id.btn_regresar);
         spn_opciones = findViewById(R.id.spn_options);
         String[] opciones = {"Suma", "Resta", "Multiplicación", "División"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones);
         spn_opciones.setAdapter(adapter);
         btn_calcular.setOnClickListener(this);
-        btn_regresar.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_calcular:
                 operacione();
-                break;
-            case R.id.btn_regresar:
-                Intent intent = new Intent(EjercicioFour.this,MainActivity.class);
-                startActivity(intent);
                 break;
         }
     }
@@ -73,17 +67,17 @@ public class EjercicioFour extends AppCompatActivity implements View.OnClickList
                 int res = n1 - n2;
                 txtv_resultado.setText("La resta de los numeros es: " + res);
                 Toast.makeText(getApplicationContext(), "La resta de los números es: " + res, Toast.LENGTH_SHORT).show();
-            }else if (selec.equals("Multiplicación")){
+            } else if (selec.equals("Multiplicación")) {
                 int mul = n1 * n2;
-                txtv_resultado.setText("La multiplicación de los números es: "+ mul);
+                txtv_resultado.setText("La multiplicación de los números es: " + mul);
                 Toast.makeText(getApplicationContext(), "La multiplicación de los números es: " + mul, Toast.LENGTH_SHORT).show();
-            }else if (selec.equals("División")){
+            } else if (selec.equals("División")) {
                 double n3 = Integer.parseInt(edt_first_number.getText().toString());
                 double n4 = Integer.parseInt(edt_second_number.getText().toString());
-                if (n4 == 0){
+                if (n4 == 0) {
                     txtv_resultado.setText("DIVISIÓN ENTRE CERO, NO SE PUEDE REALIZAR LA OPERACIÓN");
-                    Toast.makeText(this, "DIVISIÓN ENTRE CERO, NO SE PUEDE REALIZAR LA OPERACIÓN", Toast.LENGTH_SHORT ).show();
-                }else {
+                    Toast.makeText(this, "DIVISIÓN ENTRE CERO, NO SE PUEDE REALIZAR LA OPERACIÓN", Toast.LENGTH_SHORT).show();
+                } else {
                     double div = n3 / n4;
                     txtv_resultado.setText("La división de los números es: " + div);
                     Toast.makeText(getApplicationContext(), "La división de los números es: " + div, Toast.LENGTH_SHORT).show();
@@ -92,5 +86,13 @@ public class EjercicioFour extends AppCompatActivity implements View.OnClickList
         }
 
     }
+
+    public void onBackPressed(){
+        Intent intent = new Intent(EjercicioFour.this,MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+
 
 }

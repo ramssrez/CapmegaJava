@@ -22,7 +22,6 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
     private EditText edt_first_number;
     private EditText edt_second_number;
     private Button   btn_calcular;
-    private Button   btn_regresar;
     private TextView txtv_resultado;
     private CheckBox check_box_suma;
     private CheckBox check_box_resta;
@@ -32,11 +31,9 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.ejercicio_three);
         Objects.requireNonNull(getSupportActionBar()).hide();
         btn_calcular = findViewById(R.id.btn_calcular);
-        btn_regresar = findViewById(R.id.btn_regresar);
         edt_first_number   = findViewById(R.id.edt_first_number);
         edt_second_number  = findViewById(R.id.edt_second_number);
         btn_calcular.setOnClickListener(this);
-        btn_regresar.setOnClickListener(this);
         txtv_resultado = findViewById(R.id.txtv_resultado);
         check_box_resta = findViewById(R.id.chb_resta);
         check_box_suma = findViewById(R.id.chb_suma);
@@ -66,10 +63,6 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
                 }
                 break;
 
-            case R.id.btn_regresar:
-                Intent intent = new Intent(EjercicioThree.this,MainActivity.class);
-                startActivity(intent);
-                break;
         }
 
 
@@ -97,6 +90,12 @@ public class EjercicioThree extends AppCompatActivity implements View.OnClickLis
 
         }
 
+    }
+
+    public void onBackPressed(){
+        Intent intent = new Intent(EjercicioThree.this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
 

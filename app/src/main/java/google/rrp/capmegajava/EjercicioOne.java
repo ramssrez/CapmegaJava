@@ -23,7 +23,6 @@ public class EjercicioOne extends AppCompatActivity implements View.OnClickListe
     private  EditText edtSecondNumber;
     private  Button   btnCalcularEncisoB;
     private  Button   btnCalcularEncisoC;
-    private  Button   btn_regresar;
     private  TextView txtvResultado;
 
 
@@ -34,9 +33,7 @@ public class EjercicioOne extends AppCompatActivity implements View.OnClickListe
         Objects.requireNonNull(getSupportActionBar()).hide();
         btnCalcularEncisoB = findViewById(R.id.btn_calcular_enciso_b);
         btnCalcularEncisoC = findViewById(R.id.btn_calcular_enciso_c);
-        btn_regresar = findViewById(R.id.btn_regresar);
         btnCalcularEncisoC.setOnClickListener(this);
-        btn_regresar.setOnClickListener(this);
 
         btnCalcularEncisoB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,20 +65,18 @@ public class EjercicioOne extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_regresar:
-                Intent intent = new Intent(EjercicioOne.this,MainActivity.class );
-                startActivity(intent);
-                break;
-            case R.id.btn_calcular_enciso_c:
                 sumaNumeros();
-                break;
-
-        }
-
-
-
     }
+
+    public void onBackPressed(){
+        Intent intent = new Intent(EjercicioOne.this,MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
+
+
+
 
 

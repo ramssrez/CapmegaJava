@@ -1,6 +1,8 @@
 package google.rrp.capmegajava;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_one = findViewById(R.id.btn_go_ejercicio_one);
         btn_two = findViewById(R.id.btn_go_ejercicio_two);
         btn_three = findViewById(R.id.btn_go_ejercicio_three);
-        btn_four= findViewById(R.id.btn_go_ejercicio_four);
+        btn_four = findViewById(R.id.btn_go_ejercicio_four);
         btn_six = findViewById(R.id.btn_go_ejercicio_six);
         btn_seven = findViewById(R.id.btn_go_ejercicio_seven);
         btn_one.setOnClickListener(this);
@@ -36,12 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_seven.setOnClickListener(this);
 
 
-
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_go_ejercicio_one:
                 Intent intent = new Intent(MainActivity.this, EjercicioOne.class);
                 startActivity(intent);
@@ -76,5 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
-}
 
+    public void onBackPressed() {
+        finish();
+    }
+}
