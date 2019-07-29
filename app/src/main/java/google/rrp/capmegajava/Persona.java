@@ -28,18 +28,18 @@ public class Persona {
     }
 
     public void  dormir(){
-        Log.i("Metodo dormir","Deja dormir, aun son las 12 de la mañana");
+        Log.i(" Metodo dormir","Deja dormir, aun son las 12 de la mañana");
 
     }
 
     public  void comer(){
-        Log.i("Metodo comer", "Vamos por unas kekas");
+        Log.i(" Metodo comer", "Vamos por unas kekas");
 
     }
 
     @SuppressLint("LongLogTag")
     public  void caminar(){
-        Log.i("Metodo caminar","Esta re-lejos Capmega");
+        Log.i(" Metodo caminar","Esta re-lejos Capmega");
     }
 
 

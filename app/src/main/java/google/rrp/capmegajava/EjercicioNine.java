@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 /*
  * Capmega Soluciones Informáticas S.A.S de C.V
@@ -49,26 +50,34 @@ public class EjercicioNine extends AppCompatActivity implements View.OnClickList
     }
 
     public void toma_de_adatos(){
-        String name = edt_name.getText().toString();
-        String sexo = spn_sexo.getSelectedItem().toString();
-        int edad = Integer.parseInt(edt_age.getText().toString());
-        float altura = Float.parseFloat(edt_altura.getText().toString());
-        float peso = Float.parseFloat(edt_peso.getText().toString());
 
-        Persona persona = new Persona(name,sexo);
-        persona.setAltura(altura);
-        persona.setEdad(edad);
-        persona.setPeso(peso);
-        persona.dormir();
-        persona.caminar();
-        persona.comer();
 
-        Log.i("Nombre", persona.getNombre());
-        Log.i("Sexo", persona.getSexo());
-        Log.i("Edad", String.valueOf(persona.getEdad()));
-        Log.i("Altura", String.valueOf(persona.getAltura()));
-        Log.i("Peso", String.valueOf(persona.getPeso()));
 
+
+        if (edt_name.getText().toString().isEmpty()||edt_age.getText().toString().isEmpty()||
+                edt_altura.getText().toString().isEmpty()||edt_peso.getText().toString().isEmpty()){
+            Toast.makeText(this,"No debe dejar espacios en blanco", Toast.LENGTH_SHORT).show();
+        }else {
+            String name = edt_name.getText().toString();
+            String sexo = spn_sexo.getSelectedItem().toString();
+            int edad = Integer.parseInt(edt_age.getText().toString());
+            float altura = Float.parseFloat(edt_altura.getText().toString());
+            float peso = Float.parseFloat(edt_peso.getText().toString());
+
+            Persona persona = new Persona(name, sexo);
+            persona.setAltura(altura);
+            persona.setEdad(edad);
+            persona.setPeso(peso);
+            persona.dormir();
+            persona.caminar();
+            persona.comer();
+
+            Log.i(" Nombre", persona.getNombre());
+            Log.i(" Sexo", persona.getSexo());
+            Log.i(" Edad", persona.getEdad() +" años");
+            Log.i(" Altura", persona.getAltura() + " metros");
+            Log.i(" Peso", persona.getPeso() + " kilos");
+        }
 
     }
 }
