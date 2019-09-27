@@ -23,6 +23,7 @@ public class EjercicioNine extends AppCompatActivity implements View.OnClickList
     private EditText edt_altura;
     private Spinner spn_sexo;
     private Button btn_go;
+    private Button btn_pantalla;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +35,29 @@ public class EjercicioNine extends AppCompatActivity implements View.OnClickList
         edt_peso = findViewById(R.id.edt_peso);
         edt_altura = findViewById(R.id.edt_altura);
         spn_sexo = findViewById(R.id.spn_sexo);
-        btn_go = findViewById(R.id.btn_ir);
+        btn_go = findViewById(R.id.btn_log);
+        btn_pantalla = findViewById(R.id.btn_pantalla);
 
         String[] sexo = {"Maculino", "Femenino"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, sexo);
         spn_sexo.setAdapter(adapter);
         btn_go.setOnClickListener(this);
+        btn_pantalla.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Log.i("Boton" , "El boton esta ok");
-        toma_de_adatos();
+        switch (v.getId()){
+            case R.id.btn_pantalla:
+                toma_de_adatos();
+                break;
+            case R.id.btn_log:
+                implementando_log();
+                break;
+        }
+
+
 
     }
 
@@ -69,12 +81,29 @@ public class EjercicioNine extends AppCompatActivity implements View.OnClickList
             persona.caminar();
             persona.comer();
 
-            Log.i(" Nombre", persona.getNombre());
+            Log.i(" Nombre", persona.toString());
             Log.i(" Sexo", persona.getSexo());
             Log.i(" Edad", persona.getEdad() +" años");
             Log.i(" Altura", persona.getAltura() + " metros");
             Log.i(" Peso", persona.getPeso() + " kilos");
         }
+
+    }
+
+    public  void implementando_log(){
+        Persona persona  = new Persona("Rene", "Masculino");
+        persona.setAltura(1.85f);
+        persona.setEdad(28);
+        persona.setPeso(86);
+        persona.dormir();
+        persona.caminar();
+        persona.comer();
+        persona.setNombre("Jesus");
+        Log.i(" Nombre", persona.toString());
+        Log.i(" Sexo", persona.getSexo());
+        Log.i(" Edad", persona.getEdad() +" años");
+        Log.i(" Altura", persona.getAltura() + " metros");
+        Log.i(" Peso", persona.getPeso() + " kilos");
 
     }
 }

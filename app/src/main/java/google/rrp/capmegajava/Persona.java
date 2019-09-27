@@ -43,9 +43,6 @@ public class Persona {
     }
 
 
-    public String getNombre() {
-        return nombre;
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -82,4 +79,12 @@ public class Persona {
     public void setAltura(float altura) {
         this.altura = altura;
     }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+
+
+
 }

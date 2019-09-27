@@ -33,7 +33,8 @@
         android:hint="@string/nombre"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtv_presentation" />
+        app:layout_constraintTop_toBottomOf="@+id/txtv_presentation"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/edt_edad"
@@ -83,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_peso" />
 
     <Button
-        android:id="@+id/btn_ir"
+        android:id="@+id/btn_log"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -96,5 +97,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spn_sexo" />
+
+    <Button
+        android:id="@+id/btn_pantalla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="@string/boton_pantalla"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_log" />
 
 </android.support.constraint.ConstraintLayout>

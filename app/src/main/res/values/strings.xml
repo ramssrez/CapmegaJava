@@ -30,6 +30,7 @@
     <string name="edad">¿Cuál es tu edad?</string>
     <string name="altura">¿Cuál es tu altura?</string>
     <string name="peso">¿Cuál es tu peso?</string>
-    <string name="ir">Ir</string>
+    <string name="ir">Datos en el Log</string>
+    <string name="boton_pantalla">Boton Pantalla</string>
 
 </resources>
